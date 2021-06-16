@@ -2,24 +2,24 @@ import java.util.Scanner;
 import java.util.*;
 
 public class Board {
-    public void display(){ //set an array value for each of the rows on the board
-        String[] board; //will be displayed in the format of individual spots, then a line to seperate, then the next spot
-        System.out.println("|---|---|---|");
-        System.out.println("| " + board[0] + " | "
+    public static void display(){ //set an array value for each of the rows on the board
+        String[] board = {"0","1","2","3","4","5","6","7","8"}; //will be displayed in the format of individual spots, then a line to seperate, then the next spot
+        System.out.println("   |   |   ");
+        System.out.println(" " + board[0] + " | "
                 + board[1] + " | " + board[2]
-                + " |");
-        System.out.println("|-----------|");
-        System.out.println("| " + board[3] + " | "
+                + " ");
+        System.out.println("-----------");
+        System.out.println(" " + board[3] + " | "
                 + board[4] + " | " + board[5]
-                + " |");
-        System.out.println("|-----------|");
-        System.out.println("| " + board[6] + " | "
+                + " ");
+        System.out.println("-----------");
+        System.out.println(" " + board[6] + " | "
                 + board[7] + " | " + board[8]
-                + " |");
-        System.out.println("|---|---|---|");
+                + " ");
+        System.out.println("   |   |   ");
     }
 
-    public void players(){
+    /*public void players(){
         boolean Player1 = true;
         boolean Player2 = true;
     }
@@ -33,7 +33,7 @@ public class Board {
 
             numTurns--;
         }
-    }
+    }*/
 }
 //Eight total win conditions
 //Draw means number of turns runs out

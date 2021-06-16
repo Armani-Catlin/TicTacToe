@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Evaluator {
     static String checkWinner() {
+        String turn;
+        String[] board = {"0","1","2","3","4","5","6","7","8"};
         for (int a = 0; a < 8; a++) {
             String line = null;
 
@@ -31,14 +33,10 @@ public class Evaluator {
                     line = board[2] + board[4] + board[6];
                     break;
             }
-            //For X winner
             if (line.equals("XXX")) {
-                return "X";
-            }
-
-            // For O winner
-            else if (line.equals("OOO")) {
-                return "O";
+                return "Player1";
+            } else if (line.equals("OOO")) {
+                return "Player2";
             }
         }
 
@@ -46,9 +44,11 @@ public class Evaluator {
             if (Arrays.asList(board).contains(
                     String.valueOf(a + 1))) {
                 break;
-            }
-            else if (a == 8) {
-                return "draw";
+            } else if (a == 8) {
+                return "Catscratch";
             }
         }
+        System.out.println(turn + "'s Please enter the spot number you " +
+                "would like to place your marker." + turn + " Spot selected:");
+    }
 }
