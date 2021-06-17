@@ -3,11 +3,12 @@ import java.util.*;
 
 public class Main {
     public static String[] board;
+    static String turn = "Player one";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         board = new String[9];
-        turn = "Player1";
+
         String winner = null;
 
         for (int a = 0; a < 9; a++){
@@ -38,11 +39,11 @@ public class Main {
                     String.valueOf(numInput))) {
                 board[numInput - 1] = turn;
 
-                if (turn.equals("player1")) {
-                    turn = "Player2";
+                if (turn.equals("player one")) {
+                    turn = "Player two";
                 }
                 else {
-                    turn = "Player1";
+                    turn = "Player one";
                 }
 
                 Board.display();
